@@ -27,24 +27,76 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    // toggleGrid();
+    toggleGrid();
 
 
     // TODO 2 - Create Platforms
+createPlatform(200, 210, 10, 300)
 
+createPlatform(180, 211, 20, 10, )
+createPlatform(160, 212, 40, 10, )
+createPlatform(140, 213, 60, 10, )
+createPlatform(120, 214, 80, 5, )
+createPlatform(100, 215, 100, 5, )
+createPlatform(80, 216, 120, 5, )
+createPlatform(60, 217, 140, 5, )
+createPlatform(40, 218, 160, 5, )
+createPlatform(20, 219, 180, 5, )
+createPlatform(0, 220, 200, 5, )
 
+createPlatform(0, 100, 300, 5, )
 
+createPlatform(100, 310, 100, 5, )
 
+createPlatform(0, 405, 100, 5, )
+
+createPlatform(100, 500, 100, 10, )
+
+createPlatform(0, 600, 200, 10, )
+
+createPlatform(320, 467, 100, 6, )
+
+createPlatform(710, 600, 200, 10, )
+
+createPlatform(1110, 500, 75, 10, )
+createPlatform(1210, 325, 75, 10, )
+createPlatform(960, 550, 50, 10, )
+createPlatform(1010, 370, 50, 10, )
+
+createPlatform(810, 260, 187, 10, )
+
+createPlatform(1175, 120, 75, 10, )
+createPlatform(1225, 118, 50, 10)
+createPlatform(1250, 116, 75, 10, )
+
+createPlatform(625, 250, 50, 1)
+
+createPlatform(465, 85, 125, 5)
+
+createPlatform(400, 220, 50, 5)
+createPlatform(350, 210, 50, 5)
+createPlatform(345, 165, 10, 50)
+createPlatform(445, 225, 35, 5)
+
+createPlatform(200, 605, 50, 5)
+createPlatform(1160, 125, 20, 5)
     // TODO 3 - Create Collectables
-
-
-
-    
+    createCollectable("steve", 1250, 50)
+    createCollectable("steve", 700, 260)
+    createCollectable("steve", 530, 50)
+    createCollectable("steve", 150, 270)
+    createCollectable("steve", 800, 540)
+    createCollectable("steve", 100, 50)
     // TODO 4 - Create Cannons
+    createCannon("top", 120, 2600)
+    createCannon("left",650, 1)
+    createCannon("bottom", 150, 2500)
+    createCannon("bottom", 1200, 2900)
+    createCannon("top", 780, 2600)
+    createCannon("right", 520, 3000)
+    createCannon("bottom", 400, 5000)
+    createCannon("top", 100, 2000, 20, 10, 100, 400, 6)
 
-
-    
-    
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
