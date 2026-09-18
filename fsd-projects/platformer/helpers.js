@@ -414,6 +414,14 @@ function deathOfPlayer() {
     keyPress.any = false;
     window.location.reload();
   }
+   ctx.font = "300% serif";
+  ctx.fillText(
+    "maybe TRY to collect Steve, not die",
+    canvas.width / 4,
+    canvas.height / 4 + canvas.height / 3,
+    (canvas.width / 16) * 14
+    
+  );
 }
 
 function playerFrictionAndGravity() {
