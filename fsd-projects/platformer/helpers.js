@@ -416,7 +416,7 @@ function deathOfPlayer() {
   }
    ctx.font = "300% serif";
   ctx.fillText(
-    "maybe TRY to collect Steve, not die",
+    "maybe TRY to collect keys, not die",
     canvas.width / 4,
     canvas.height / 4 + canvas.height / 3,
     (canvas.width / 16) * 14
