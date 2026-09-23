@@ -84,7 +84,7 @@ createPlatform(1160, 125, 20, 5, "black")
     createCollectable("keybetter", 1250, 50)
     createCollectable("keybetter", 700, 260)
     createCollectable("keybetter", 530, 50)
-    createCollectable("keybetter", 150, 270)
+    createCollectable("orb", 150, 270)
     createCollectable("keybetter", 800, 540)
     createCollectable("keybetter", 100, 50)
     // TODO 4 - Create Cannons
