@@ -585,7 +585,7 @@ function drawCannons() {
     ctx.save(); //save the current translation of the screen.
     ctx.translate(cannons[i].x, cannons[i].y); //you are moving the top left of the screen to the pictures location, this is because you can't rotate the image, you have to rotate the whole page
     ctx.rotate((cannons[i].rotation * Math.PI) / 180); //then you rotate. rotation is centered on 0,0 on the canvas, which is why we moved the picture to 0,0 with translate(x,y)
-    ctx.drawImage(cannonImage, 0, 0, cannonWidth, cannonHeight); //you draw the image on the rotated canvas. as of this line, the picture is straight and the rest of the page is rotated
+    ctx.drawImage(cannons[i].image, 0, 0, cannonWidth, cannonHeight); //you draw the image on the rotated canvas. as of this line, the picture is straight and the rest of the page is rotated
     //also the previous line uses -width / 2 so that the picture is centered. This will mean that (0,0) is at the exact center of the image
     ctx.translate(-cannons[i].x, -cannons[i].y); //the reverse of the previous translate, this moves the page back to the correct place so that the image is no longer at (0,0)
     ctx.restore(); //this unrotates the canvas so the canvas is straight, but now since you did that the picture looks rotated
@@ -772,6 +772,7 @@ function createCannon(
 ) {
   if (wallLocation === "top") {
     cannons.push({
+      image: cannonImage,
       x: position,
       y: cannonHeight,
       rotation: 180,
@@ -789,6 +790,7 @@ function createCannon(
     });
   } else if (wallLocation === "bottom") {
     cannons.push({
+      image: cannonImage,
       x: position,
       y: canvas.height - cannonHeight,
       rotation: 0,
@@ -806,6 +808,7 @@ function createCannon(
     });
   } else if (wallLocation === "left") {
     cannons.push({
+      image: cannonImage,
       x: cannonHeight,
       y: position,
       rotation: 90,
@@ -823,6 +826,177 @@ function createCannon(
     });
   } else if (wallLocation === "right") {
     cannons.push({
+      image: cannonImage,
+      x: canvas.width - cannonHeight,
+      y: position,
+      rotation: 270,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: null,
+      maxX: null,
+      speedX: 0,
+      minY: minPos,
+      maxY: maxPos,
+      speedY: speed,
+    });
+  }
+}
+
+function createCanon2(
+  wallLocation,
+  position,
+  timeBetweenShots,
+  width = defaultProjectileWidth,
+  height = defaultProjectileHeight,
+  minPos = null,
+  maxPos = null,
+  speed = 1
+) {
+  if (wallLocation === "top") {
+    cannons.push({
+      image: cannonImage2,
+      x: position,
+      y: cannonHeight,
+      rotation: 180,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: minPos,
+      maxX: maxPos,
+      speedX: speed,
+      minY: null,
+      maxY: null,
+      speedY: 0,
+    });
+  } else if (wallLocation === "bottom") {
+    cannons.push({
+      image: cannonImage2,
+      x: position,
+      y: canvas.height - cannonHeight,
+      rotation: 0,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: minPos,
+      maxX: maxPos,
+      speedX: speed,
+      minY: null,
+      maxY: null,
+      speedY: 0,
+    });
+  } else if (wallLocation === "left") {
+    cannons.push({
+      image: cannonImage2,
+      x: cannonHeight,
+      y: position,
+      rotation: 90,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: null,
+      maxX: null,
+      speedX: 0,
+      minY: minPos,
+      maxY: maxPos,
+      speedY: speed,
+    });
+  } else if (wallLocation === "right") {
+    cannons.push({
+      image: cannonImage2,
+      x: canvas.width - cannonHeight,
+      y: position,
+      rotation: 270,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: null,
+      maxX: null,
+      speedX: 0,
+      minY: minPos,
+      maxY: maxPos,
+      speedY: speed,
+    });
+  }
+}
+
+function createCanon3(
+  wallLocation,
+  position,
+  timeBetweenShots,
+  width = defaultProjectileWidth,
+  height = defaultProjectileHeight,
+  minPos = null,
+  maxPos = null,
+  speed = 1
+) {
+  if (wallLocation === "top") {
+    cannons.push({
+      image: cannonImage3,
+      x: position,
+      y: cannonHeight,
+      rotation: 180,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: minPos,
+      maxX: maxPos,
+      speedX: speed,
+      minY: null,
+      maxY: null,
+      speedY: 0,
+    });
+  } else if (wallLocation === "bottom") {
+    cannons.push({
+      image: cannonImage3,
+      x: position,
+      y: canvas.height - cannonHeight,
+      rotation: 0,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: minPos,
+      maxX: maxPos,
+      speedX: speed,
+      minY: null,
+      maxY: null,
+      speedY: 0,
+    });
+  } else if (wallLocation === "left") {
+    cannons.push({
+      image: cannonImage3,
+      x: cannonHeight,
+      y: position,
+      rotation: 90,
+      projectileCountdown: 0,
+      location: wallLocation,
+      timeBetweenShots: timeBetweenShots / (1000 / frameRate),
+      projectileWidth: width,
+      projectileHeight: height,
+      minX: null,
+      maxX: null,
+      speedX: 0,
+      minY: minPos,
+      maxY: maxPos,
+      speedY: speed,
+    });
+  } else if (wallLocation === "right") {
+    cannons.push({
+      image: cannonImage3,
       x: canvas.width - cannonHeight,
       y: position,
       rotation: 270,
