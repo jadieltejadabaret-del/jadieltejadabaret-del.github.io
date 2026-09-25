@@ -8,6 +8,7 @@ $(function () {
     if (firstTimeSetup) {
       halleImage = document.getElementById("player");
       projectileImage = document.getElementById("projectile");
+      cannonImage3 = document.getElementById("canon3");
       cannonImage2 = document.getElementById("canon2");
       cannonImage = document.getElementById("cannon");
 
@@ -97,11 +98,11 @@ $(function () {
     // TODO 4 - Create Cannons
     createCanon2("top", 120, 2600);
     createCanon2("left", 650, 1);
-    createCannon("bottom", 150, 2500);
+    createCanon2("bottom", 150, 2500);
     createCannon("bottom", 1200, 2900);
     createCannon("top", 780, 2600);
     createCannon("right", 520, 3000);
-    createCannon("bottom", 400, 5000);
+    createCanon3("bottom", 400, 5000);
     createCannon("top", 100, 3500, 20, 10, 100, 1000, 6);
     createCannon("bottom", 100, 3500, 30, 10, 100, 400, 6);
     //////////////////////////////////
