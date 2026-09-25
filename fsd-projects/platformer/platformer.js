@@ -97,14 +97,14 @@ $(function () {
     createCollectable("keybetter", 100, 50);
     // TODO 4 - Create Cannons
     createCanon2("top", 120, 2600);
-    createCanon2("left", 650, 1);
+    createCanon2("left", 650, .0001);
     createCanon2("bottom", 150, 2500);
     createCannon("bottom", 1200, 2900);
     createCannon("top", 780, 2600);
     createCannon("right", 520, 3000);
     createCanon3("bottom", 400, 5000);
-    createCannon("top", 100, 3500, 20, 10, 100, 1000, 6);
-    createCannon("bottom", 100, 3500, 30, 10, 100, 400, 6);
+    createCannon("top", 100, 5000, 20, 10, 100, 1000, 6);
+    createCannon("bottom", 100, 5000, 30, 10, 100, 400, 6);
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
