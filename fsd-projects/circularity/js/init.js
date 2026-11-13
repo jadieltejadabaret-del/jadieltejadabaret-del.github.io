@@ -62,7 +62,11 @@ drawCircle();
             physikz.updatePosistion(circles[4]);
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
-           game.checkCirclePosistion()
+           game.checkCirclePosistion(circles[0]);
+           game.checkCirclePosistion(circles[1]);
+           game.checkCirclePosistion(circles[2]);
+           game.checkCirclePosistion(circles[3]);
+           game.checkCirclePosistion(circles[4]);
 
             // TODO 8 / TODO 9 : Iterate over the array
            
@@ -88,7 +92,9 @@ drawCircle();
            if(circle.y > 0 ){
             
            }
-           
+           if(y > canvas.height){}
+
+            if(x > canvas.width){}
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
